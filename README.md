@@ -8,7 +8,7 @@ Simply type :
 	ask_and_process_befunge_file()
 
 ## Example
-
+The Befunge file **program.bf** creates a Mandelbrot ASCII fractal which you can see here.
 <img src="example.png" />
 
 ## About
