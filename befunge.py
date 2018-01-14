@@ -184,8 +184,8 @@ def process_code(program_matrix):
 
             # Retrieve the instruction
             instruction = program_matrix[cursor_y][cursor_x]
-            # print('{} ... ({},{}) => {}'.format(program_stack, cursor_y, cursor_x, instruction))
 
+            # Toggle ASCII mode
             if instruction == Instruction.TOGGLE_ASCII_MODE.value:
                 in_ascii_mode = not in_ascii_mode
 
@@ -196,9 +196,6 @@ def process_code(program_matrix):
             # Direction changer
             elif instruction in [d.value for d in [Direction.UP, Direction.DOWN, Direction.LEFT, Direction.RIGHT]]:
                 cursor_direction = instruction
-
-            # Toggle ASCII mode
-
 
             # Numbers
             elif instruction.isdigit() and int(instruction) in range(0, 10):
@@ -295,5 +292,13 @@ def process_code(program_matrix):
             cursor_y += 1
 
 
-if __name__ == '__main__':
+'''
+    Syntactic sugar for calling multiple functions one inside another
+'''
+
+
+def ask_and_process_befunge_file():
     process_code(source_to_matrix(retrieve_program_source_path()))
+
+
+
