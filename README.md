@@ -1,5 +1,5 @@
 # BefungeInterpreter
-A Befunge interpretter written in native Python
+A Befunge interpreter written in native Python
 
 ## How to use ?
 
